@@ -1,3 +1,20 @@
+import { LinkStatus } from "./types";
+
+export const status = {
+  LIVE: <LinkStatus>{
+    text: "LIVE",
+    color: "failure",
+  },
+  SOON: <LinkStatus>{
+    text: "SOON",
+    color: "warning",
+  },
+  NEW: <LinkStatus>{
+    text: "NEW",
+    color: "success",
+  },
+};
+
 export const links = [
   {
     label: "Home",
@@ -22,6 +39,7 @@ export const links = [
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
+    status: status.LIVE,
   },
   {
     label: "Pools",
@@ -39,12 +57,20 @@ export const links = [
     href: "/nft",
   },
   {
+    label: "Team Battle",
+    icon: "TeamBattleIcon",
+    href: "/competition",
+    status: status.SOON,
+  },
+  {
     label: "Profile & Teams",
     icon: "GroupsIcon",
+    status: status.LIVE,
     items: [
       {
         label: "Leaderboard",
-        href: "/",
+        href: "/teams",
+        status: status.NEW,
       },
       {
         label: "YourProfile",
@@ -93,21 +119,21 @@ export const links = [
     label: "More",
     icon: "MoreIcon",
     items: [
-      // {
-      //   label: "Voting",
-      //   href: "https://voting.pancakeswap.finance",
-      // },
+      {
+        label: "Voting",
+        href: "https://voting.pancakeswap.finance",
+      },
       {
         label: "Github",
-        href: "https://github.com/goosedefi/",
+        href: "https://github.com/pancakeswap",
       },
       {
         label: "Docs",
-        href: "https://goosedefi.gitbook.io/goose-finance/",
+        href: "https://docs.pancakeswap.finance",
       },
       {
         label: "Blog",
-        href: "https://goosefinance.medium.com/",
+        href: "https://pancakeswap.medium.com",
       },
     ],
   },
@@ -120,67 +146,62 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/goosedefi",
+        href: "https://t.me/pancakeswap",
       },
-      // {
-      //   label: "Bahasa Indonesia",
-      //   href: "https://t.me/PancakeSwapIndonesia",
-      // },
+      {
+        label: "Bahasa Indonesia",
+        href: "https://t.me/PancakeSwapIndonesia",
+      },
       {
         label: "中文",
-        href: "https://t.me/goosefinancechinese",
+        href: "https://t.me/PancakeSwap_CN",
       },
-      // {
-      //   label: "Tiếng Việt",
-      //   href: "https://t.me/PancakeSwapVN",
-      // },
+      {
+        label: "Tiếng Việt",
+        href: "https://t.me/PancakeSwapVN",
+      },
       {
         label: "Italiano",
-        href: "https://t.me/goosefinanceitalian",
+        href: "https://t.me/pancakeswap_ita",
       },
       {
         label: "русский",
-        href: "https://t.me/goosefinancerussian",
+        href: "https://t.me/pancakeswap_ru",
       },
       {
         label: "Türkiye",
-        href: "https://t.me/GooseFinanceTurkey",
+        href: "https://t.me/pancakeswapturkiye",
       },
-      // {
-      //   label: "Português",
-      //   href: "https://t.me/PancakeSwapPortuguese",
-      // },
+      {
+        label: "Português",
+        href: "https://t.me/PancakeSwapPortuguese",
+      },
       {
         label: "Español",
-        href: "https://t.me/goosefinancespanish",
+        href: "https://t.me/PancakeswapEs",
       },
       {
         label: "日本語",
-        href: "https://t.me/goosefinancejapanese",
+        href: "https://t.me/pancakeswapjp",
       },
       {
         label: "Français",
-        href: "https://t.me/goosefinancefrench",
+        href: "https://t.me/pancakeswapfr",
       },
       {
         label: "Announcements",
-        href: "https://t.me/goosefinanceann",
+        href: "https://t.me/PancakeSwapAnn",
       },
       {
-        label: "Price Bot",
-        href: "https://t.me/BinanceRocketEGG",
+        label: "Whale Alert",
+        href: "https://t.me/PancakeSwapWhales",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/goosedefi",
-  },
-  {
-    label: "Reddit",
-    icon: "RedditIcon",
-    href: "https://www.reddit.com/r/GooseFinanceofficial",
+    href: "https://twitter.com/pancakeswap",
   },
 ];
 
